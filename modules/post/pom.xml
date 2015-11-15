@@ -8,6 +8,19 @@
   <artifactId>post</artifactId>
   <name>post</name>
   <description>post description</description>
+  <build>
+  	<finalName>post</finalName>
+  	<plugins>
+  		<plugin>
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<version>3.3</version>
+  			<configuration>
+  				<source>1.7</source>
+  				<target>1.7</target>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
   <dependencies>
   	<dependency>
   		<groupId>com.dpilipenko</groupId>

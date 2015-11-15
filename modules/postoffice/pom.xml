@@ -8,6 +8,19 @@
   <artifactId>postoffice</artifactId>
   <name>postoffice</name>
   <description>postoffice</description>
+  <build>
+  	<finalName>postoffice</finalName>
+  	<plugins>
+  		<plugin>
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<version>3.3</version>
+  			<configuration>
+  				<source>1.7</source>
+  				<target>1.7</target>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
   <dependencies>
   	<dependency>
 	    <groupId>org.subethamail</groupId>
