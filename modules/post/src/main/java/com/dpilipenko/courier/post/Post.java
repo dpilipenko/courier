@@ -24,7 +24,12 @@ public class Post {
 		IEnvelope<String> envelope = createEnvelope(to, subject, body);
 		email(envelope);
 	}
-
+	
+	public void email(Conf conf, String to, String subject, String body) throws MessagingException {
+		IEnvelope<String> envelope = createEnvelope(to, subject, body);
+		sendMessage(envelope, conf);
+	}
+	
 	public void email(IEnvelope<?> envelope) throws MessagingException {
 		Conf conf = Conf.fetchInstance();
 		sendMessage(envelope, conf);
@@ -37,7 +42,7 @@ public class Post {
 			Session session = getSession(conf);
 			MimeMessage mimeMessage = new MessageNoMessageID(session);
 			mimeMessage.setFrom(new InternetAddress(conf.getFrom()));
-			mimeMessage.addRecipient(RecipientType.TO, new InternetAddress(to));
+			mimeMessage.addRecipient(RecipientType.TO, new InternetAddress(to)); // TODO add earlier validation to make sure to is a valid input (i.e. no whitespace)
 			mimeMessage.setSubject(message.getSubject());
 			mimeMessage.setText((String)message.getBody());
 			Transport.send(mimeMessage);

@@ -5,25 +5,25 @@
 	
 	<parent>
 		<groupId>com.dpilipenko</groupId>
-		<artifactId>modules</artifactId>
+		<artifactId>packages</artifactId>
 		<version>${project.version}</version>
 	</parent>
 	
-	<artifactId>postoffice</artifactId>
-	<name>postoffice</name>
-	<description>postoffice</description>
+	<artifactId>myapp</artifactId>
+	<name>myapp</name>
+	<description>myapp</description>
 	
 	<dependencies>
-		<!-- third-party dependencies -->
+		<!-- courier dependencies -->
 		<dependency>
-			<groupId>org.subethamail</groupId>
-			<artifactId>subethasmtp</artifactId>
-			<version>3.1.7</version>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>post</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-nop</artifactId>
-			<version>1.7.12</version>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>postoffice</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 	

@@ -11,7 +11,11 @@ import org.subethamail.smtp.server.SMTPServer;
 
 public class PostOffice {
 
-	public static void run(int port, IListener[] listeners) {
+	public void run(int port, IListener listener) {
+		run(port, new IListener[] {listener});
+	}
+	
+	public void run(int port, IListener[] listeners) {
 		log("begin");
 		List<SimpleMessageListener> listenerlist = new ArrayList<SimpleMessageListener>(Arrays.asList(listeners));
 		MessageHandlerFactory listenerAdapter = new SimpleMessageListenerAdapter(listenerlist); 
