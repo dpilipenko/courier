@@ -1,4 +1,4 @@
-package com.dpilipenko.courier.commons.impl;
+package com.dpilipenko.courier.commons.simple;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

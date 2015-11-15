@@ -15,8 +15,8 @@ import com.dpilipenko.courier.post.util.Conf;
 import com.dpilipenko.courier.post.util.MessageNoMessageID;
 import com.dpilipenko.courier.commons.IEnvelope;
 import com.dpilipenko.courier.commons.IMessage;
-import com.dpilipenko.courier.commons.impl.SimpleEnvelope;
-import com.dpilipenko.courier.commons.impl.SimpleMessage;
+import com.dpilipenko.courier.commons.simple.SimpleEnvelope;
+import com.dpilipenko.courier.commons.simple.SimpleMessage;
 
 public class Post {
 	

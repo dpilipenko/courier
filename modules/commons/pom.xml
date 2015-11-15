@@ -8,4 +8,17 @@
   <artifactId>commons</artifactId>
   <name>commons</name>
   <description>commons description</description>
+  <build>
+  	<finalName>commons</finalName>
+  	<plugins>
+  		<plugin>
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<version>3.3</version>
+  			<configuration>
+  				<source>1.7</source>
+  				<target>1.7</target>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
 </project>
